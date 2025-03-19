@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #f3f4f6;
+    min-height: 100vh;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 64px;
+}
+
+.nav-container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    color: #2563eb;
+    width: 32px;
+    height: 32px;
+}
+
+.logo-text {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.add-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-button>i {
+    margin: 0px 5px;
+}
+
+.add-button:hover {
+    background-color: #1d4ed8;
+}
+
+.add-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Main */
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+.content-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 48px 0;
+}
+
+.empty-icon {
+    width: 48px;
+    height: 48px;
+    color: #9ca3af;
+    margin: 0 auto;
+    display: block;
+}
+
+.empty-title {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.empty-text {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Student card */
+.student-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+.student-info-container {
+    display: flex;
+    align-items: center;
+}
+
+.student-pfp {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url('https://i.pinimg.com/736x/b6/47/0b/b6470b72ee3ad6dc963ad5a5f792b264.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-right: 16px;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.student-qualification {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.student-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    /* Align icons to the right */
+}
+
+.student-icons i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.edit-icon {
+    color: #63E6BE;
+}
+
+.delete-icon {
+    color: #e40707;
+}
+
+/* ADD MODAL  */
+.add-screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.add-form {
+    background-color: white;
+    height: 42vh;
+    width: 50%;
+    padding: 30px 0px;
+    border-radius: 10px;
+}
+
+.add-form>h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.inputs>input {
+    width: 80%;
+    height: 6vh;
+    padding: 0px 10px;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.add-form>.btns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 40px;
+}
+
+.cancel-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* UPDATE MODAL  */
+.update-screen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.update-form {
+    background-color: white;
+    height: 42vh;
+    width: 50%;
+    padding: 30px 0px;
+    border-radius: 10px;
+}
+
+.update-form>h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.inputs>input {
+    width: 80%;
+    height: 6vh;
+    padding: 0px 10px;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.update-form>.btns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 40px;
+}
+
+.cancel-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

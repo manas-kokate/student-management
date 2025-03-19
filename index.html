@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=SUSE:wght@100..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <!-- Book icon for logo -->
+                <i class="fa-solid fa-graduation-cap" class="logo_hat"></i>
+                <span class="logo-text">Student Management System</span>
+            </div>
+
+            <!-- Add New Student Button -->
+            <button class="add-button" onclick="openAdd('add')">
+                <i class="fa-solid fa-plus"></i>
+                Add New Student
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main-->
+    <div class="main">
+        <div class="content-card">
+            <h2 class="card-title">Student List</h2>
+
+            <!-- Student List -->
+            <div id="student-list"></div>
+        </div>
+    </div>
+
+
+    <!-- ADD MODAL  -->
+    <div class="add-screen" id="add-screen">
+        <div class="add-form">
+            <h1 id="formHeading">Add new student</h1>
+            <div class="inputs">
+                <input type="text" placeholder="Student Name" name="" id="name">
+                <input type="text" placeholder="Department" name="" id="department">
+            </div>
+            <div class="btns">
+                <button class="add-button" onclick="addnewStudent()" id="addUpdbtn">
+                    Add Student
+                </button>
+                <button class="cancel-button" onclick="openAdd()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- UPDATE MODAL  -->
+    <div class="update-screen" id="update-screen">
+        <div class="update-form">
+            <h1 id="formHeading">Update Student</h1>
+            <div class="inputs">
+                <input type="text" id="UpdateID" style="display: none;">
+                <input type="text" placeholder="Student Name" name="" id="updateName">
+                <input type="text" placeholder="Department" name="" id="updateDepartment">
+            </div>
+            <div class="btns">
+                <button class="add-button" onclick="updateStudent()" id="updateBtn">
+                    Update Student
+                </button>
+                <button class="cancel-button" onclick="openUpdate()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+
+</html>
